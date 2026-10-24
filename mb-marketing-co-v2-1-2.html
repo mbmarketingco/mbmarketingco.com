@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MB Marketing Co. — Your Brand. Our Strategy. Real Results.</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0D1B4B;
+    --navy-dark: #080D24;
+    --navy-mid: #111f5c;
+    --gold: #FFC107;
+    --gold-dark: #e6ac00;
+    --white: #FFFFFF;
+    --gray: #a0aec0;
+    --card-bg: #121d52;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy-dark);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: rgba(8, 13, 36, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,193,7,0.1);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-box {
+    width: 38px; height: 38px;
+    background: var(--gold);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--navy-dark);
+  }
+
+  .nav-logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--white);
+  }
+
+  .nav-logo-text span { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  /* TICKER */
+  .ticker {
+    background: var(--gold);
+    padding: 10px 0;
+    margin-top: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ticker-inner {
+    display: inline-flex;
+    animation: ticker 30s linear infinite;
+    gap: 0;
+  }
+
+  .ticker span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--navy-dark);
+    letter-spacing: 1.5px;
+    padding: 0 24px;
+  }
+
+  .ticker-dot {
+    color: var(--navy-dark);
+    opacity: 0.4;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    padding: 80px 24px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255,193,7,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(255,193,7,0.05) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    border: 1px solid rgba(255,193,7,0.4);
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 .gold { color: var(--gold); }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 36px;
+    max-width: 360px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .btn-secondary {
+    border: 2px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* STATS */
+  .stats {
+    background: var(--navy-dark);
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .stat-item {}
+
+  .stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* SECTION STYLES */
+  .section {
+    padding: 64px 24px;
+  }
+
+  .section-dark { background: var(--navy-dark); }
+  .section-navy { background: var(--navy); }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .section-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    margin-bottom: 36px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .service-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,193,7,0.08);
+    border-radius: 12px;
+    padding: 20px 16px;
+    transition: border-color 0.3s;
+  }
+
+  .service-card:hover {
+    border-color: rgba(255,193,7,0.35);
+  }
+
+  .service-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .service-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--white);
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pricing-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,193,7,0.1);
+    border-radius: 16px;
+    padding: 28px 22px;
+    position: relative;
+  }
+
+  .pricing-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, #1a2560 0%, #0f1a4a 100%);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -12px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    padding: 5px 16px;
+    border-radius: 50px;
+    text-transform: uppercase;
+  }
+
+  .pricing-tier {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .pricing-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .pricing-price span {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .pricing-period {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 20px;
+  }
+
+  .pricing-features {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+
+  .pricing-features li {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pricing-features li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .pricing-btn {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .pricing-btn-gold {
+    background: var(--gold);
+    color: var(--navy-dark);
+  }
+
+  .pricing-btn-outline {
+    border: 2px solid rgba(255,193,7,0.4);
+    color: var(--gold);
+  }
+
+  /* ADD-ONS */
+  .addons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .addon-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,193,7,0.08);
+    border-radius: 10px;
+    padding: 16px 14px;
+  }
+
+  .addon-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--white);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .addon-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--gold);
+  }
+
+  /* ABOUT */
+  .about-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,193,7,0.12);
+    border-radius: 16px;
+    padding: 28px 22px;
+  }
+
+  .about-avatar {
+    width: 72px; height: 72px;
+    background: linear-gradient(135deg, var(--gold), #e6ac00);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--navy-dark);
+    margin-bottom: 18px;
+  }
+
+  .about-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .about-role {
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 16px;
+  }
+
+  .about-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .value-tag {
+    background: rgba(255,193,7,0.12);
+    border: 1px solid rgba(255,193,7,0.25);
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+  }
+
+  /* PROCESS */
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .process-step {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .step-num {
+    width: 40px; height: 40px;
+    background: rgba(255,193,7,0.12);
+    border: 1px solid rgba(255,193,7,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .step-content {}
+
+  .step-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .step-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, #1a2560 0%, var(--navy) 100%);
+    padding: 64px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255,193,7,0.15);
+  }
+
+  .cta-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .cta-section p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .whatsapp-btn {
+    background: #25D366;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .email-btn {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--navy-dark);
+    padding: 48px 24px;
+  }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255,193,7,0.08);
+    border-radius: 12px;
+    padding: 16px;
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  .contact-icon {
+    width: 42px; height: 42px;
+    background: rgba(255,193,7,0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  .contact-value {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #040810;
+    padding: 32px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255,193,7,0.08);
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .footer-tagline {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .footer-copy span { color: var(--gold); }
+
+  /* DIVIDER */
+  .gold-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.3;
+  }
+
+  /* TYPEWRITER */
+  .typewriter {
+    display: inline;
+  }
+
+  .cursor {
+    display: inline-block;
+    color: var(--gold);
+    animation: blink 1s infinite;
+    font-weight: 300;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+/* V2: accessibility, responsive layout, and resilient progressive enhancement */
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.skip-link { position: fixed; left: 12px; top: -80px; z-index: 2000; padding: 12px 18px; background: var(--gold); color: var(--navy-dark); font-weight: 800; border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+nav { gap: 14px; }
+.nav-links { display: flex; align-items: center; gap: 18px; margin-left: auto; }
+.nav-links a { color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; }
+.nav-links a:hover { color: var(--gold); }
+.menu-toggle { display: none; border: 1px solid rgba(255,193,7,.55); border-radius: 8px; padding: 9px 12px; color: var(--gold); background: transparent; font: 700 13px 'Montserrat', sans-serif; cursor: pointer; }
+.hero h1 { font-size: clamp(32px, 6vw, 68px); overflow-wrap: anywhere; }
+.hero p { max-width: 630px; }
+.section, .hero, .cta-section, .contact-section, footer { padding-left: max(20px, calc((100% - 1120px)/2)); padding-right: max(20px, calc((100% - 1120px)/2)); }
+.stats { padding-left: max(20px, calc((100% - 1120px)/2)); padding-right: max(20px, calc((100% - 1120px)/2)); }
+.section-title { font-size: clamp(26px, 3.5vw, 40px); }
+.service-card, .pricing-card, .addon-card { min-width: 0; }
+.contact-value { overflow-wrap: anywhere; }
+section[id], #main-content { scroll-margin-top: 100px; }
+.reveal { opacity: 1; transform: none; }
+.js-enhanced .reveal { opacity: 0; transform: translateY(24px); }
+.js-enhanced .reveal.visible { opacity: 1; transform: none; }
+@media (min-width: 768px) {
+  .hero { padding-top: 100px; padding-bottom: 100px; }
+  .hero-buttons, .cta-buttons { flex-direction: row; }
+  .hero-buttons a, .cta-buttons a { min-width: 190px; }
+  .stats { grid-template-columns: repeat(4, 1fr); }
+  .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .addons-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+  .pricing-card { display: flex; flex-direction: column; }
+  .pricing-btn { margin-top: auto; }
+  .contact-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 850px) {
+  nav { flex-wrap: wrap; }
+  .menu-toggle { display: block; margin-left: auto; }
+  .nav-links { display: none; order: 4; flex-basis: 100%; flex-direction: column; align-items: stretch; margin: 0; padding: 10px 0; gap: 0; }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding: 12px; border-top: 1px solid rgba(255,255,255,.12); }
+  .nav-cta { padding: 10px 12px; }
+}
+@media (max-width: 360px) {
+  .services-grid, .addons-grid { grid-template-columns: 1fr; }
+  .nav-logo-text { font-size: 12px; }
+  .nav-cta { font-size: 10px; padding: 9px; }
+  .hero h1 { font-size: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .js-enhanced .reveal { opacity: 1; transform: none; }
+}
+
+
+/* V2.1 mobile polish */
+html { scroll-padding-top: 86px; }
+.reveal, .js-enhanced .reveal, .js-enhanced .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+nav { min-height: 70px; }
+.nav-logo { min-width: 0; flex-shrink: 1; }
+.nav-logo-text { line-height: 1.25; }
+.nav-cta { white-space: nowrap; text-align: center; }
+.service-card, .addon-card { transition: border-color .2s ease, transform .2s ease; }
+.service-card:hover, .addon-card:hover { border-color: rgba(255,193,7,.45); }
+@media (max-width: 850px) {
+  nav {
+    padding: 10px 14px;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  .nav-logo-box { width: 34px; height: 34px; flex-shrink: 0; }
+  .nav-logo-text { font-size: 13px; }
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 8px 9px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .nav-cta { padding: 9px 10px; font-size: 11px; flex-shrink: 0; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--navy-dark);
+    border-bottom: 1px solid rgba(255,193,7,.25);
+    box-shadow: 0 10px 20px rgba(0,0,0,.25);
+    padding: 8px 16px;
+  }
+  .ticker { margin-top: 70px; }
+  .section { padding-top: 48px; padding-bottom: 48px; }
+  .section-sub { margin-bottom: 24px; }
+  .pricing-grid { gap: 14px; }
+  .hero { padding-top: 58px; padding-bottom: 55px; }
+}
+@media (max-width: 400px) {
+  nav { padding: 10px 10px; gap: 6px; }
+  .nav-logo { gap: 6px; }
+  .nav-logo-text { font-size: 11px; }
+  .menu-toggle { font-size: 11px; padding: 8px 7px; }
+  .nav-cta { font-size: 10px; padding: 9px 7px; }
+}
+@media (max-width: 340px) {
+  .nav-logo-text { font-size: 10px; }
+  .nav-logo-box { width: 30px; height: 30px; }
+  .nav-cta { font-size: 9px; }
+}
+</style>
+<meta content="MB Marketing Co. is a South African digital marketing agency offering Google Ads, Meta Ads, social media management, web development, SEO and branding." name="description"/><meta content="#0D1B4B" name="theme-color"/><meta content="website" property="og:type"/><meta content="MB Marketing Co. | Digital Marketing Agency" property="og:title"/><meta content="MB Marketing Co. is a South African digital marketing agency offering Google Ads, Meta Ads, social media management, web development, SEO and branding." property="og:description"/><meta content="https://mbmarketingco.com/" property="og:url"/><meta content="summary" name="twitter:card"/><link href="https://mbmarketingco.com/" rel="canonical"/><link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D1B4B'/%3E%3Ctext x='32' y='42' font-size='27' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23FFC107'%3EMB%3C/text%3E%3C/svg%3E" rel="icon"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- NAV -->
+<nav aria-label="Primary navigation">
+<a aria-label="MB Marketing Co. home" class="nav-logo" href="#main-content">
+<div class="nav-logo-box">MB</div>
+<div class="nav-logo-text">MB Marketing <span>Co.</span></div>
+</a>
+<button aria-controls="primary-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">☰ Menu</button><div aria-label="Site sections" class="nav-links" id="primary-menu"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a></div><a class="nav-cta" href="#contact">Get Started</a></nav>
+<!-- TICKER -->
+<div aria-label="Digital marketing services" class="ticker" role="region">
+<div class="ticker-inner">
+<span>META ADS</span><span class="ticker-dot">•</span>
+<span>GOOGLE ADS</span><span class="ticker-dot">•</span>
+<span>SOCIAL MEDIA</span><span class="ticker-dot">•</span>
+<span>WEB DEVELOPMENT</span><span class="ticker-dot">•</span>
+<span>SEO</span><span class="ticker-dot">•</span>
+<span>BRANDING</span><span class="ticker-dot">•</span>
+<span>AI &amp; AUTOMATION</span><span class="ticker-dot">•</span>
+<span>CONTENT CREATION</span><span class="ticker-dot">•</span>
+<span>EMAIL MARKETING</span><span class="ticker-dot">•</span>
+<span>SAAS DEVELOPMENT</span><span class="ticker-dot">•</span>
+<span>META ADS</span><span class="ticker-dot">•</span>
+<span>GOOGLE ADS</span><span class="ticker-dot">•</span>
+<span>SOCIAL MEDIA</span><span class="ticker-dot">•</span>
+<span>WEB DEVELOPMENT</span><span class="ticker-dot">•</span>
+<span>SEO</span><span class="ticker-dot">•</span>
+<span>BRANDING</span><span class="ticker-dot">•</span>
+<span>AI &amp; AUTOMATION</span><span class="ticker-dot">•</span>
+<span>CONTENT CREATION</span><span class="ticker-dot">•</span>
+<span>EMAIL MARKETING</span><span class="ticker-dot">•</span>
+<span>SAAS DEVELOPMENT</span><span class="ticker-dot">•</span>
+</div>
+</div>
+<!-- HERO -->
+<section class="hero" id="main-content" tabindex="-1">
+<div class="hero-badge">BOUTIQUE DIGITAL MARKETING · SOUTH AFRICA</div>
+<h1>Your Brand.<br/><span class="gold"><span class="typewriter" id="typewriter"></span><span class="cursor">|</span></span></h1>
+<p>We build brand presence, drive paid traffic, and deliver measurable results for businesses worldwide — from a boutique agency based in South Africa.</p>
+<div class="hero-buttons">
+<a class="btn-primary" href="#pricing">View Pricing</a>
+<a class="btn-secondary" href="#services">Our Services</a>
+</div>
+</section>
+<!-- STATS -->
+<div class="stats">
+<div class="stat-item">
+<div class="stat-number">10+</div>
+<div class="stat-label">Services</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">ZAR</div>
+<div class="stat-label">Local Pricing</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">100%</div>
+<div class="stat-label">Upfront Strategy</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">24hr</div>
+<div class="stat-label">Response Time</div>
+</div>
+</div>
+<div class="gold-divider"></div>
+<!-- SERVICES -->
+<section class="section section-navy" id="services">
+<div class="reveal">
+<div class="section-label">What We Do</div>
+<h2 class="section-title">Services Built for <span style="color:var(--gold)">Real Growth</span></h2>
+<p class="section-sub">Everything your business needs to dominate online — all under one roof.</p>
+</div>
+<div class="services-grid reveal">
+<div class="service-card">
+<div class="service-icon">📱</div>
+<div class="service-name">Social Media Management</div>
+</div>
+<div class="service-card">
+<div class="service-icon">📘</div>
+<div class="service-name">Meta Ads (Facebook &amp; Instagram)</div>
+</div>
+<div class="service-card">
+<div class="service-icon">🔍</div>
+<div class="service-name">Google Ads Management</div>
+</div>
+<div class="service-card">
+<div class="service-icon">💻</div>
+<div class="service-name">Web Development</div>
+</div>
+<div class="service-card">
+<div class="service-icon">🚀</div>
+<div class="service-name">SEO Optimization</div>
+</div>
+<div class="service-card">
+<div class="service-icon">📧</div>
+<div class="service-name">Email Marketing</div>
+</div>
+<div class="service-card">
+<div class="service-icon">🎨</div>
+<div class="service-name">Content Creation</div>
+</div>
+<div class="service-card">
+<div class="service-icon">🤖</div>
+<div class="service-name">AI &amp; Automation</div>
+</div>
+<div class="service-card">
+<div class="service-icon">✨</div>
+<div class="service-name">Branding &amp; Identity</div>
+</div>
+<div class="service-card">
+<div class="service-icon">⚙️</div>
+<div class="service-name">SaaS Development</div>
+</div>
+</div>
+</section>
+<div class="gold-divider"></div>
+<!-- PRICING -->
+<section class="section section-dark" id="pricing">
+<div class="reveal">
+<div class="section-label">Transparent Pricing</div>
+<h2 class="section-title">Plans That <span style="color:var(--gold)">Scale With You</span></h2>
+<p class="section-sub">All prices in South African rand. No hidden fees. Cancel anytime.</p>
+</div>
+<div class="pricing-grid">
+<!-- STARTER -->
+<div class="pricing-card reveal">
+<div class="pricing-tier">Starter</div>
+<div class="pricing-price">R800<span>/mo</span></div>
+<div class="pricing-period">Best for new businesses</div>
+<ul class="pricing-features">
+<li>2 Social Media Platforms</li>
+<li>12 Posts per Month</li>
+<li>Basic Graphic Design</li>
+<li>Monthly Report</li>
+<li>24hr Response Time</li>
+</ul>
+<a aria-label="Get Started on WhatsApp" class="pricing-btn pricing-btn-outline" href="https://wa.me/27687717800">Get Started</a>
+</div>
+<!-- GROWTH (FEATURED) -->
+<div class="pricing-card featured reveal">
+<div class="featured-badge">⭐ Most Popular</div>
+<div class="pricing-tier">Growth</div>
+<div class="pricing-price">R1,500<span>/mo</span></div>
+<div class="pricing-period">Best for growing brands</div>
+<ul class="pricing-features">
+<li>3 Social Media Platforms</li>
+<li>20 Posts per Month</li>
+<li>Meta OR Google Ads</li>
+<li>Up to R8,000 Ad Spend</li>
+<li>Weekly Reports</li>
+<li>Priority Support</li>
+</ul>
+<a aria-label="Get Started on WhatsApp" class="pricing-btn pricing-btn-gold" href="https://wa.me/27687717800">Get Started</a>
+</div>
+<!-- PREMIUM -->
+<div class="pricing-card reveal">
+<div class="pricing-tier">Premium</div>
+<div class="pricing-price">R2,500<span>/mo</span></div>
+<div class="pricing-period">Best for established businesses</div>
+<ul class="pricing-features">
+<li>All Platforms</li>
+<li>30 Posts per Month</li>
+<li>Meta + Google Ads</li>
+<li>Up to R24,000 Ad Spend</li>
+<li>SEO Included</li>
+<li>Dedicated Manager</li>
+<li>Daily Reports</li>
+</ul>
+<a aria-label="Get Started on WhatsApp" class="pricing-btn pricing-btn-outline" href="https://wa.me/27687717800">Get Started</a>
+</div>
+</div>
+</section>
+<!-- ADD-ONS -->
+<section class="section section-navy">
+<div class="reveal">
+<div class="section-label">Extras</div>
+<h2 class="section-title">Add-On <span style="color:var(--gold)">Services</span></h2>
+<p class="section-sub">Customize your package with these powerful add-ons.</p>
+</div>
+<div class="addons-grid reveal">
+<div class="addon-card">
+<div class="addon-name">Google Ads Setup</div>
+<div class="addon-price">R1,200</div>
+</div>
+<div class="addon-card">
+<div class="addon-name">Meta Ads Setup</div>
+<div class="addon-price">R1,200</div>
+</div>
+<div class="addon-card">
+<div class="addon-name">SEO Audit</div>
+<div class="addon-price">R1,600</div>
+</div>
+<div class="addon-card">
+<div class="addon-name">Content Calendar</div>
+<div class="addon-price">R800/mo</div>
+</div>
+<div class="addon-card">
+<div class="addon-name">Extra Posts</div>
+<div class="addon-price">R160/post</div>
+</div>
+<div class="addon-card">
+<div class="addon-name">Brand Strategy Session</div>
+<div class="addon-price">R1,920</div>
+</div>
+</div>
+</section>
+<div class="gold-divider"></div>
+<!-- ABOUT -->
+<section class="section section-dark" id="about">
+<div class="reveal">
+<div class="section-label">Our Story</div>
+<h2 class="section-title">Built for the <span style="color:var(--gold)">Bold</span></h2>
+</div>
+<div class="about-card reveal">
+<div class="about-avatar">M</div>
+<div class="about-name">Megan B.</div>
+<div class="about-role">Founder &amp; Digital Strategist</div>
+<p class="about-text">
+      MB Marketing Co. was born from a simple belief — that talent shouldn't be confined to a desk from 9 to 5. Founded in South Africa with a vision to serve the world, we help entrepreneurs, creatives, and small businesses grow through smart, data-driven digital marketing.
+    </p>
+<p class="about-text">
+      We're not just another marketing agency. We're your growth partner — bringing big-agency strategy at boutique pricing, with real results you can measure.
+    </p>
+<div class="about-values">
+<span class="value-tag">Results First</span>
+<span class="value-tag">ZAR Pricing</span>
+<span class="value-tag">Global Reach</span>
+<span class="value-tag">No Fluff</span>
+<span class="value-tag">Real Strategy</span>
+</div>
+</div>
+</section>
+<!-- PROCESS -->
+<section class="section section-navy" id="process">
+<div class="reveal">
+<div class="section-label">How It Works</div>
+<h2 class="section-title">From Zero to <span style="color:var(--gold)">Revenue</span></h2>
+<p class="section-sub">Simple, fast, and built around your goals.</p>
+</div>
+<div class="process-steps reveal">
+<div class="process-step">
+<div class="step-num">1</div>
+<div class="step-content">
+<div class="step-title">Discovery Call</div>
+<div class="step-desc">We learn your business, goals, and current challenges in a free 30-min strategy call.</div>
+</div>
+</div>
+<div class="process-step">
+<div class="step-num">2</div>
+<div class="step-content">
+<div class="step-title">Custom Strategy</div>
+<div class="step-desc">We build a tailored marketing plan designed specifically for your brand and audience.</div>
+</div>
+</div>
+<div class="process-step">
+<div class="step-num">3</div>
+<div class="step-content">
+<div class="step-title">Launch &amp; Execute</div>
+<div class="step-desc">We go live with your campaigns, content, and ads — fast and professionally.</div>
+</div>
+</div>
+<div class="process-step">
+<div class="step-num">4</div>
+<div class="step-content">
+<div class="step-title">Optimize &amp; Scale</div>
+<div class="step-desc">We track, analyze, and improve performance every week to maximize your ROI.</div>
+</div>
+</div>
+</div>
+</section>
+<div class="gold-divider"></div>
+<!-- CTA -->
+<section class="cta-section">
+<div class="reveal">
+<h2>Ready to <span style="color:var(--gold)">Grow?</span></h2>
+<p>Join businesses worldwide who trust MB Marketing Co. to drive real results. Let's build something great together.</p>
+<div class="cta-buttons">
+<a aria-label="💬 WhatsApp Us Now on WhatsApp" class="whatsapp-btn" href="https://wa.me/27687717800">
+        💬 WhatsApp Us Now
+      </a>
+<a class="email-btn" href="mailto:maganbooysen357@gmail.com">📧 Send Us an Email</a>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+<div class="reveal">
+<div class="section-label">Get In Touch</div>
+<h2 class="section-title">Let's <span style="color:var(--gold)">Connect</span></h2>
+</div>
+<div class="contact-items reveal">
+<a aria-label="💬 WhatsApp +27 68 771 7800 on WhatsApp" class="contact-item" href="https://wa.me/27687717800">
+<div class="contact-icon">💬</div>
+<div>
+<div class="contact-label">WhatsApp</div>
+<div class="contact-value">+27 68 771 7800</div>
+</div>
+</a>
+<a class="contact-item" href="mailto:maganbooysen357@gmail.com">
+<div class="contact-icon">📧</div>
+<div>
+<div class="contact-label">Email</div>
+<div class="contact-value">maganbooysen357@gmail.com</div>
+</div>
+</a>
+<a class="contact-item" href="https://instagram.com/mbmarketing007.co">
+<div class="contact-icon">📸</div>
+<div>
+<div class="contact-label">Instagram</div>
+<div class="contact-value">@mbmarketing007.co</div>
+</div>
+</a>
+<a class="contact-item" href="https://mbmarketingco.com">
+<div class="contact-icon">🌍</div>
+<div>
+<div class="contact-label">Website</div>
+<div class="contact-value">mbmarketingco.com</div>
+</div>
+</a>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="footer-logo">
+<div class="nav-logo-box">MB</div>
+<div class="nav-logo-text">MB Marketing <span>Co.</span></div>
+</div>
+<p class="footer-tagline">Boutique Digital Marketing Agency<br/>South Africa · Serving Worldwide</p>
+<div class="footer-links">
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+<p class="footer-copy">© 2026 <span>MB Marketing Co.</span> · All rights reserved · ZAR Pricing · International Clients Welcome</p>
+</footer>
+<script>
+(() => {
+  const menuButton = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('primary-menu');
+  if (menuButton && menu) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation menu');
+    }));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        menu.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const el = document.getElementById('typewriter');
+  if (el) {
+    if (reduceMotion) {
+      el.textContent = 'Real Results.';
+    } else {
+      const words = ['Our Strategy.', 'Real Results.', 'Your Growth.', 'Our Expertise.'];
+      let wordIndex = 0, charIndex = 0, deleting = false;
+      function type() {
+        const word = words[wordIndex];
+        if (!deleting) {
+          charIndex++;
+          el.textContent = word.slice(0, charIndex);
+          if (charIndex === word.length) {
+            deleting = true;
+            setTimeout(type, 1800);
+            return;
+          }
+        } else {
+          charIndex--;
+          el.textContent = word.slice(0, charIndex);
+          if (charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+          }
+        }
+        setTimeout(type, deleting ? 60 : 80);
+      }
+      type();
+    }
+  }
+
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    
+    reveals.forEach(element => observer.observe(element));
+  }
+})();
+</script>
+</body>
+</html>
